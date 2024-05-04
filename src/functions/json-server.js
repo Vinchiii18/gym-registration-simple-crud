@@ -1,6 +1,6 @@
 // functions/json-server.js
 
-const data = require('../db.json');
+const data = require('../../db.json');
 
 exports.handler = async (event, context) => {
   return {
