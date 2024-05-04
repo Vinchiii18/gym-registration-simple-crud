@@ -7,7 +7,6 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { Router } from '@angular/router';
-import { NgConfirmService } from 'ng-confirm-box';
 import { NgToastService } from 'ng-angular-popup';
 
 
@@ -28,7 +27,6 @@ export class RegistrationListComponent implements OnInit{
   constructor(
     private api: ApiService,
     private router: Router,
-    private confirm: NgConfirmService,
     private toast: NgToastService
 
   ) {
