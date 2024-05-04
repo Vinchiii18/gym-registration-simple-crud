@@ -66,16 +66,12 @@ export class RegistrationListComponent implements OnInit{
     }
 
     delete(id: number) {
-      this.confirm.showConfirm('Are you sure you want to delete?', 
-      ()=> {
+      if (window.confirm('Are you sure you want to delete?')) {
         this.api.deleteRegisteredUser(id).subscribe(res => {
           this.toast.success({detail: 'SUCCESS', summary: 'Deleted Successfully!', duration: 3000});
           this.getUsers();
-        })
-      },
-      ()=> {
-
-      })
+        });
+      }
     }
 
 }
