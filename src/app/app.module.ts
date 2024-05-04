@@ -8,7 +8,6 @@ import { CreateRegistrationComponent } from './create-registration/create-regist
 import { RegistrationListComponent } from './registration-list/registration-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { NgToastModule } from 'ng-angular-popup';
-import { NgConfirmModule } from 'ng-confirm-box';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -42,7 +41,6 @@ import {MatChipsModule} from '@angular/material/chips';
     AppRoutingModule,
 
     NgToastModule,
-    NgConfirmModule,
 
     MatToolbarModule,
     MatIconModule,
