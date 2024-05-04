@@ -4,8 +4,6 @@ import { ApiService } from '../services/api.service';
 import { NgToastService } from 'ng-angular-popup';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../models/user.model';
-import { catchError } from 'rxjs/operators';
-import { of } from 'rxjs';
 
 @Component({
   selector: 'app-create-registration',
