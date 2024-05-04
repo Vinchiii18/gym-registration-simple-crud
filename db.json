@@ -1,0 +1,122 @@
+{
+  "enquiry": [
+    {
+      "firstName": "Alvin",
+      "lastName": "Consular",
+      "email": "alvin.webdev.consular@gmail.com",
+      "mobile": "9399154242",
+      "weight": 79,
+      "height": 1.6,
+      "bmi": 30.859374999999993,
+      "bmiResult": "Obese",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "package": "Yearly",
+      "important": [
+        "Toxic Fat Reduction",
+        "Building Lean Muscle",
+        "Sugar Craving Body",
+        "Fitness"
+      ],
+      "haveGymBefore": "",
+      "enquiryDate": "2024-05-04T16:00:00.000Z",
+      "id": 1
+    },
+    {
+      "firstName": "Alvin",
+      "lastName": "Consular",
+      "email": "alvin.webdev.consular@gmail.com",
+      "mobile": "9399154242",
+      "weight": 79,
+      "height": 1.6,
+      "bmi": 30.859374999999993,
+      "bmiResult": "Obese",
+      "gender": "Male",
+      "requireTrainer": "Yes",
+      "package": "Yearly",
+      "important": [
+        "Toxic Fat Reduction",
+        "Building Lean Muscle",
+        "Sugar Craving Body",
+        "Fitness"
+      ],
+      "haveGymBefore": "Yes",
+      "enquiryDate": "2024-05-04T16:00:00.000Z",
+      "id": 2
+    },
+    {
+      "firstName": "TEST firstname",
+      "lastName": "TEST lastname",
+      "email": "test@dummy.com",
+      "mobile": "23456798a",
+      "weight": 55,
+      "height": 1,
+      "bmi": "",
+      "bmiResult": "",
+      "gender": "Female",
+      "requireTrainer": "Yes",
+      "package": "Quarterly",
+      "important": [
+        "Toxic Fat Reduction"
+      ],
+      "haveGymBefore": "No",
+      "enquiryDate": "2024-05-01T16:00:00.000Z",
+      "id": 3
+    },
+    {
+      "firstName": "aa",
+      "lastName": "sdf",
+      "email": "dfasdf",
+      "mobile": "asdf",
+      "weight": 222,
+      "height": 21,
+      "bmi": "",
+      "bmiResult": "",
+      "gender": "",
+      "requireTrainer": "",
+      "package": "",
+      "important": "",
+      "haveGymBefore": "",
+      "enquiryDate": "",
+      "id": 4
+    },
+    {
+      "firstName": "arya",
+      "lastName": "consular",
+      "email": "arya@dummy.com",
+      "mobile": "999999999",
+      "weight": 12,
+      "height": 3,
+      "bmi": 1.3333333333333333,
+      "bmiResult": "Underweight",
+      "gender": "Female",
+      "requireTrainer": "No",
+      "package": "Monthly",
+      "important": [
+        "Fitness"
+      ],
+      "haveGymBefore": "Yes",
+      "enquiryDate": "2018-06-02T16:00:00.000Z",
+      "id": 5
+    },
+    {
+      "firstName": "mina",
+      "lastName": "consular",
+      "email": "arminagayas@dummy.com",
+      "mobile": "553649841",
+      "weight": 68,
+      "height": 1.5748,
+      "bmi": 27.419409677529032,
+      "bmiResult": "Overweight",
+      "gender": "Female",
+      "requireTrainer": "No",
+      "package": "Quarterly",
+      "important": [
+        "Sugar Craving Body"
+      ],
+      "haveGymBefore": "Yes",
+      "enquiryDate": "2024-05-14T16:00:00.000Z",
+      "id": 6
+    }
+  ]
+}

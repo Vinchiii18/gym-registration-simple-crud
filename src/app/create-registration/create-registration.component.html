@@ -1,0 +1,129 @@
+<div class="logo text-center">
+    <img width="200" src="assets/gymlogo.png" alt="logo">
+</div>
+
+<div class="registration-form m-3 p-4">
+    <form [formGroup]="registerForm">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input formControlName="firstName" matInput placeholder="Firstname">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input formControlName="lastName" matInput placeholder="Lastname">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>                
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input formControlName="email" matInput placeholder="Email">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile</mat-label>
+                    <input formControlName="mobile" matInput placeholder="Mobile">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>                
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Weight</mat-label>
+                    <input formControlName="weight" type="number" matInput placeholder="Weight">
+                    <mat-icon matSuffix>line_weight</mat-icon>
+                    <mat-hint>Unit is KGs</mat-hint>
+                </mat-form-field> 
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Height</mat-label>
+                    <input [readonly]="!this.registerForm.value.weight" formControlName="height" type="number" matInput placeholder="Height">
+                    <mat-icon matSuffix><i class="fa fa-text-height" aria-hidden="true"></i></mat-icon>
+                    <mat-hint>Unit is meters</mat-hint>
+                </mat-form-field>                
+            </div>
+            <div class="col-md-6 mt-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>BMI</mat-label>
+                    <input readonly formControlName="bmi" type="number" matInput placeholder="BMI">
+                    <mat-icon matSuffix><i class="fa fa-sort-numeric-desc"></i></mat-icon>
+                </mat-form-field> 
+            </div>
+            <div class="col-md-6 mt-2">
+                <mat-form-field appearance="outline">
+                    <mat-label>BMI Result</mat-label>
+                    <input readonly formControlName="bmiResult" type="text" matInput placeholder="BMI Result">
+                    <mat-icon matSuffix style="height: 35px !important"><i class="fa fa-check" aria-hidden="true"></i></mat-icon>
+                </mat-form-field>                
+            </div>
+            <div class="col-md-6 mt-3">
+                <label id="example-radio-group-label">Do you require trainer?</label>
+                <mat-radio-group formControlName="requireTrainer"
+                  class="example-radio-group">
+                  @for (trainerOpt of ['Yes', 'No']; track trainerOpt) {
+                    <mat-radio-button class="example-radio-button" [value]="trainerOpt">{{trainerOpt}}</mat-radio-button>
+                  }
+                </mat-radio-group>
+                <!-- <div>Selected option is: {{ registerForm.get('requireTrainer')?.value }}</div> -->
+            </div>
+            <div class="col-md-6 mt-3">
+                <label id="example-radio-group-label">Gender</label>
+                <mat-radio-group formControlName="gender"
+                  class="example-radio-group">
+                  @for (gender of genders; track gender) {
+                    <mat-radio-button class="example-radio-button" [value]="gender">{{gender}}</mat-radio-button>
+                  }
+                </mat-radio-group>
+                <!-- <div>Selected gender is: {{ registerForm.get('gender')?.value }}</div> -->
+            </div>
+            <div class="col-md-6 mt-4">
+                <mat-form-field appearance="outline">
+                  <mat-label>Select Package</mat-label>
+                  <mat-select formControlName="package">
+                    @for (package of packages; track package) {
+                      <mat-option [value]="package">{{package}}</mat-option>
+                    }
+                  </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6 mt-4">
+                <mat-form-field appearance="outline">
+                  <mat-label>Which of the following is important to you?</mat-label>
+                  <mat-select multiple formControlName="important">
+                    @for (important of importantList; track important) {
+                      <mat-option [value]="important">{{important}}</mat-option>
+                    }
+                  </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <label id="example-radio-group-label">Have you been into Gym before</label>
+                <mat-radio-group formControlName="haveGymBefore"
+                  class="example-radio-group">
+                  @for (beenGym of ['Yes', 'No']; track beenGym) {
+                    <mat-radio-button class="example-radio-button" [value]="beenGym">{{beenGym}}</mat-radio-button>
+                  }
+                </mat-radio-group>
+                <!-- <div>Selected option is: {{ registerForm.get('haveGymBefore')?.value }}</div> -->
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Enquiry Date</mat-label>
+                    <input formControlName="enquiryDate" matInput [matDatepicker]="picker">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </div>
+        </div>
+        <button *ngIf="!isUpdateActive" (click)="submit()" mat-raised-button color="accent" class="mt-4" >Submit</button>
+        <button *ngIf="isUpdateActive" (click)="update()" mat-raised-button color="accent" class="mt-4" >Update</button>
+    </form>
+</div>
